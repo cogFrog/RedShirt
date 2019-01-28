@@ -113,6 +113,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &118891491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118891493}
+  - component: {fileID: 118891492}
+  m_Layer: 0
+  m_Name: PlatformSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &118891492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118891491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0b74f46cb203e46b5ca285574d0b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundSmall: {fileID: 1852748998268244, guid: 88900e611408b394c81ff79876754115,
+    type: 2}
+  groundMedium: {fileID: 1485195225917832, guid: 8133c7ea9600f1446a6390746b02d220,
+    type: 2}
+  groundLarge: {fileID: 1639907304222416, guid: b8c849f5da5343b4990c78f7649e238c,
+    type: 2}
+  player: {fileID: 1404362795}
+--- !u!4 &118891493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118891491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247691663
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,24 +428,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde96b267ae77419990c2587bf644f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  initialSpeed: 15
-  finalSpeed: 22
+  initialSpeed: 20
+  finalSpeed: 25
   overallAccel: 256
   accel: 0.1
-  jumpPower: 25
-  groundedSkin: 0.05
+  jumpPower: 30
+  maxJump: 10
+  maxJumpMulti: 4
   mask:
     serializedVersion: 2
     m_Bits: 1
   fallMulti: 2
-  lowJumpMulti: 1.6
-  groundSmall: {fileID: 1852748998268244, guid: 88900e611408b394c81ff79876754115,
-    type: 2}
-  groundMedium: {fileID: 1485195225917832, guid: 8133c7ea9600f1446a6390746b02d220,
-    type: 2}
-  groundLarge: {fileID: 1639907304222416, guid: b8c849f5da5343b4990c78f7649e238c,
-    type: 2}
+  lowJumpMulti: 4
 --- !u!61 &1404362800
 BoxCollider2D:
   m_ObjectHideFlags: 0
